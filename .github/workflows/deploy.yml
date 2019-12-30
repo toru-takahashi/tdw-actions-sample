@@ -1,0 +1,20 @@
+name: Treasure Workflow Deploy
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Treasure Workflow
+      uses: toru-takahashi/treasure-workflow-actions@v0.0.2
+      with:
+        # Treasure Workflow API Endpoint
+        td_wf_endpoint: api-workflow.treasuredata.com
+        # Treasure Data Master API
+        td_master_apikey: ${{ secrets.td_master_apikey }}
+        # Treasure Workflow Project Name
+        td_wf_project_name: workflow
