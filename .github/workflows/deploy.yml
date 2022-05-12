@@ -13,7 +13,7 @@ jobs:
       uses: toru-takahashi/treasure-workflow-actions@v0.0.2
       with:
         # Treasure Workflow API Endpoint
-        td_wf_endpoint: api-workflow.treasuredata.com
+        td_wf_endpoint: https://api-workflow.treasuredata.com
         # Treasure Data Master API
         td_master_apikey: ${{ secrets.td_master_apikey }}
         # Treasure Workflow Project Name
